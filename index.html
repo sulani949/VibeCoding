@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+            --text-color: #2d3436;
+            --card-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--primary-gradient);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .profile-card {
+            background-color: var(--card-bg);
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 380px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-image-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+            padding: 5px;
+            background: var(--secondary-gradient);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            background: white;
+        }
+
+        .profile-name {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin: 0.5rem 0;
+            letter-spacing: -0.5px;
+        }
+
+        .profile-stream {
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-bio {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #636e72;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(118, 75, 162, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px rgba(118, 75, 162, 0.4);
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="profile-image-container">
+            <img src="mahinda.jpeg" alt="Mahinda Rajapaksha" class="profile-image">
+        </div>
+        <h1 class="profile-name">Mahinda Rajapaksha</h1>
+        <div class="profile-stream">Computer Science</div>
+        <p class="profile-bio">
+            Passionate about building scalable web applications and exploring the depths of artificial intelligence. Loves open-source contribution and coffee.
+        </p>
+        <a href="#" class="contact-btn">View Portfolio</a>
+    </div>
+</body>
+</html>
